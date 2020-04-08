@@ -2,19 +2,13 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"net/http"
+
+	"github.com/off-top-go/webScraping"
 )
 
-func homePage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Homepage Endpoint Hit")
-}
-
-func handleRequests() {
-	http.HandleFunc("/", homePage)
-	log.Fatal(http.ListenAndServe(":8081", nil))
-}
-
 func main() {
-	handleRequests()
+	fmt.Println("test")
+	// webScraping.AmazonScrape()
+	// webScraping.TwitterScrape()
+	webScraping.StackoverflowScrape()
 }
