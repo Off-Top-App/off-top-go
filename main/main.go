@@ -1,14 +1,16 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/off-top-go/webScraping"
+	"github.com/off-top-go/webScraping/utils"
 )
 
 func main() {
-	fmt.Println("test")
+	slice := webScraping.WikiScrape()
+	utils.CleanSlice(slice)
+	// EXAMPLES BELOW:
+	// webScraping.MediumScrape()
 	// webScraping.AmazonScrape()
 	// webScraping.TwitterScrape()
-	webScraping.StackoverflowScrape()
+	// webScraping.StackoverflowScrape()
 }

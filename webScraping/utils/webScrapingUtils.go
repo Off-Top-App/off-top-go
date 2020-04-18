@@ -1,7 +1,8 @@
-
 package utils
 
-import "regexp"
+import (
+	"regexp"
+)
 
 func FormatPrice(price *string) {
 	r := regexp.MustCompile(`\$(\d+(\.\d+)?).*$`)
