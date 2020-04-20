@@ -18,14 +18,19 @@ func ItemExists(slice interface{}, item interface{}) bool {
 	return false
 }
 
-func CleanSlice(words []string) {
-	newSlice := make([]string, 3000)
+func CleanSliceAndWriteToFile(myDirectory string, fileName string, words []string) {
+	newSlice := cleanData(words)
+	WriteToFile(myDirectory, fileName, newSlice)
+
+}
+
+func cleanData(words []string) []string {
+	newSlice := make([]string, 5000)
 	for _, word := range words {
 		doesWordExist := ItemExists(newSlice, word)
 		if doesWordExist == false {
 			newSlice = append(newSlice, word)
 		}
 	}
-	WriteToFile("wiki-sports", newSlice)
-
+	return newSlice
 }
