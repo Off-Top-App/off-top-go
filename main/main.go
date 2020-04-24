@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	slice := webScraping.NFLWikiScrape()
+	slice := webScraping.NBAWikiScrape()
 	utils.CleanSliceAndWriteToFile("C:/go-work/src/github.com/off-top-go/webscrape-texts", "hel-lo", slice)
 	// EXAMPLES BELOW:
 	// webScraping.MediumScrape()
