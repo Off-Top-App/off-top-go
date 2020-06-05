@@ -7,7 +7,8 @@ import (
 
 func main() {
 	slice := webScraping.WikiScrape()
-	utils.CleanSliceAndWriteToFile("/Users/disjosh/go/src/github.com/off-top-go/webscrape-texts/", "wiki-sports", slice)
+	outputFilePath := "/Users/disjosh/go/src/github.com/off-top-go/webscrape-texts/"
+	utils.CleanSliceAndWriteToFile(outputFilePath, "wiki-sports", slice)
 	// EXAMPLES BELOW:
 	// webScraping.MediumScrape()
 	// webScraping.AmazonScrape()
