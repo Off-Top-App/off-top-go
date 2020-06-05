@@ -13,7 +13,8 @@ func main() {
 	systemUserName := "/Users/disjosh/"
 	outputFilePath := systemUserName + "go/src/github.com/off-top-go/webscrape-texts/"
 	utils.CleanSliceAndWriteToFile(outputFilePath, fileName, slice)
-	// EXAMPLES BELOW:
+// EXAMPLES BELOW:
+	// slice := webScraping.WhiskeyLemonadeScrape()
 	// webScraping.MediumScrape()
 	// webScraping.AmazonScrape()
 	// webScraping.TwitterScrape()
