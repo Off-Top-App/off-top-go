@@ -7,7 +7,7 @@ import (
 	"github.com/gocolly/colly"
 )
 
-func WikiScrape() []string {
+func WikiScrape() (string, []string) {
 	slice := make([]string, 3000)
 	c := colly.NewCollector()
 
@@ -31,5 +31,5 @@ func WikiScrape() []string {
 	})
 
 	c.Visit("https://en.wikipedia.org/wiki/List_of_sports")
-	return slice
+	return "wiki-sports", slice
 }

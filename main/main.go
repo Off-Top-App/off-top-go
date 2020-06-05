@@ -9,9 +9,10 @@ import (
 
 func main() {
 	fmt.Println("Running go service!")
-	slice := webScraping.WikiScrape()
-	outputFilePath := "/Users/disjosh/go/src/github.com/off-top-go/webscrape-texts/"
-	utils.CleanSliceAndWriteToFile(outputFilePath, "wiki-sports", slice)
+	fileName, slice := webScraping.WikiScrape()
+	systemUserName := "/Users/disjosh/"
+	outputFilePath := systemUserName + "go/src/github.com/off-top-go/webscrape-texts/"
+	utils.CleanSliceAndWriteToFile(outputFilePath, fileName, slice)
 	// EXAMPLES BELOW:
 	// webScraping.MediumScrape()
 	// webScraping.AmazonScrape()
